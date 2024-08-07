@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+ .bg-picture {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+.margin-top-negative {
+  margin-top: -75px;
+}
+
+.card-img-top {
+ /* Cette classe existe déjà dans bootstrap, je la modifie ici */
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+}

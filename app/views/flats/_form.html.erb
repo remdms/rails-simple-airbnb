@@ -1,0 +1,14 @@
+<div class="col-6 bg-light mx-auto">
+  <%= simple_form_for(flat) do |f| %>
+    <h1><%= action %></h1>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :number_of_guests %>
+    <%= f.input :price_per_night %>
+    <%= f.submit class:"btn btn-primary" %>
+    <%= link_to flats_path do %>
+      <button class="btn btn-danger">Cancel</button>
+    <% end %>
+  <% end %>
+</div>

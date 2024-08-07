@@ -1,0 +1,27 @@
+
+<div class="bg-picture" style="background-image: url('<%= @flat.picture_url %>')"></div>
+<div class="row margin-top-negative mx-auto">
+  <div class="col-6 mx-3">
+    <div class="row bg-light mb-3 rounded">
+      <h1><%= @flat.name %></h1>
+      <p><%= @flat.address %></p>
+    </div>
+    <div class="row bg-light mb-3 rounded">
+      <h2>A bit more about this flat</h2>
+      <p><%= @flat.description %></p>
+    </div>
+    <div class="row bg-light mb-3 rounded">
+      <h2>Details</h2>
+      <div class="d-flex">
+        <div class="card-text p-3"><i class="fa-solid fa-users"></i> <%= @flat.number_of_guests %></div>
+        <div class="card-text p-3"><i class="fa-solid fa-euro-sign"></i> <%= @flat.price_per_night %></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-4 mx-3">
+    <div class="row bg-light mb-3 rounded p-3">Book this place !</div>
+    <div class="row bg-light mb-3 rounded"><%= link_to "Edit flat", edit_flat_path(@flat), class:'btn btn-outline-primary' %></div>
+    <div class="row bg-light mb-3 rounded"><%= link_to "Remove flat", flat_path(@flat), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: 'btn btn-outline-danger' %></div>
+  </div>
+
+</div>
